@@ -31,6 +31,7 @@ html:root {
   background: var(--blue);
 }
 
+/* Картинка на заднем фоне */
 body {
   background: url(https://sun9-1.userapi.com/impg/7ntQZJ1sWeJ9TaMRlpjqDujAMRZTxmQs_RuZzg/HxLPYNH6RbQ.jpg?size=1963x2048&quality=96&sign=01053d5c603dbb081984bf8445ea75d4&type=album)
     center top 10% / cover fixed var(--background) !important;
@@ -46,14 +47,16 @@ h3 {
   font-weight: 700;
 }
 
-/* Header */
+/* --- Header --- */
 
-/* Выпадающее меню */
+/* -- Выпадающее меню -- */
 
+/* Фон верхней части */
 .l-top_menu-v2 .menu-dropdown.main > span:not(.mobile) {
   background: var(--background);
 }
 
+/* Фон выпадающего списка */
 .l-top_menu-v2 .submenu {
   background: var(--background);
   border-bottom: 1px solid var(--background);
@@ -61,16 +64,25 @@ h3 {
   border-right: 1px solid var(--background);
 }
 
-/* Поиск */
+/* -- Поиск -- */
 
+/* Фон выпадающего списка */
 .l-top_menu-v2 .global-search .search-results {
   background-color: var(--background);
 }
 
-.l-top_menu-v2 .global-search .search-results .search-mode {
+/* Цвет текста в элементах в выпадающем списке */
+.l-top_menu-v2 .global-search .search-results .search-mode,
+.l-top_menu-v2 .global-search .search-results .nothing_found:first-child,
+.l-top_menu-v2
+  .global-search
+  .search-results
+  .b-db_entry-variant-list_item:first-child,
+.l-top_menu-v2 .global-search .search-results .search-mode:first-child {
   color: #fff;
 }
 
+/* Градиент у выбранного элемента в выпадающем списке */
 .l-top_menu-v2 .global-search .search-results .nothing_found.active,
 .l-top_menu-v2 .global-search .search-results .nothing_found:focus,
 .l-top_menu-v2
@@ -91,20 +103,98 @@ h3 {
     rgba(43, 138, 204, 0.01);
 }
 
-/* Боковой штрих слева */
-
+/* Боковой штрих слева у выбранного элемента в выпадающем списке */
 .l-top_menu-v2 .global-search .search-results .search-mode.active::before {
   background: var(--blue-active);
 }
 
-/* Маркер поиска */
-
+/* Иконка поиска */
 .l-top_menu-v2 .global-search .search-marker {
   color: var(--background);
 }
 
+/* Иконка поиска (активен) */
 .l-top_menu-v2.is-search-focus .global-search .search-marker {
   color: var(--blue-active);
+}
+
+/* Main */
+
+/* -- Контейнер с информацией -- */
+
+/* Цвет ключа (характеристика) */
+.b-catalog_entry-tooltip .inner .line .key,
+.b-db_entry-variant-list_item > .info .line .key {
+  color: #fff;
+}
+
+/* -- Отзывы -- */
+
+/* Меню выбора отзывов */
+
+/* Цвет фона меню выбора отзывов */
+.b-reviews_navigation .navigation-node-all,
+.b-reviews_navigation .navigation-node-positive,
+.b-reviews_navigation .navigation-node-neutral,
+.b-reviews_navigation .navigation-node-negative {
+  background-color: var(--background);
+}
+
+/* Цвет текста неактивного элемента в меню выбора отзывов */
+.b-reviews_navigation .navigation-node.is-empty:not(.is-active) .label,
+.b-reviews_navigation .navigation-node.is-empty:not(.is-active) .count {
+  color: #5f666a;
+}
+
+/* Цвет фона элемента в меню выбора отзывов при наведении */
+.b-reviews_navigation
+  .navigation-node-positive:not(.is-active):not(.is-empty):hover,
+.b-reviews_navigation
+  .navigation-node-neutral:not(.is-active):not(.is-empty):hover,
+.b-reviews_navigation
+  .navigation-node-negative:not(.is-active):not(.is-empty):hover {
+  background-color: #292d37;
+}
+
+/* Цвет бокового штриха (ВСЕ ОТЗЫВЫ) */
+.b-reviews_navigation .navigation-node-all {
+  border-color: var(--blue);
+}
+
+/* Цвет бокового штриха (ПОЛОЖИТЕЛЬНЫЕ) */
+.b-reviews_navigation .navigation-node-positive {
+  border-color: #65a528;
+}
+
+/* Цвет бокового штриха (НЕЙТРАЛЬНЫЕ) */
+.b-reviews_navigation .navigation-node-neutral {
+  border-color: #40a2ff;
+}
+
+/* Цвет бокового штриха (ОТРИЦАТЕЛЬНЫЕ) */
+.b-reviews_navigation .navigation-node-negative {
+  border-color: #e06b74;
+}
+
+/* Оценка на отзыв */
+
+/* Цвет фона оценки на отзыв */
+.b-footer_vote {
+  background-color: var(--background);
+}
+
+/* Управление отзывами */
+
+/* Цвет фона кнопки "Ко всем отзывам" */
+.b-link_button.blue {
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+/* Цвет фона кнопки "Ко всем отзывам" при наведении */
+.b-link_button.blue:hover {
+  background-color: var(--blue-hover);
+  border-color: var(--blue-hover);
 }
 
 /* ХЗ */
@@ -444,7 +534,6 @@ div.b-db_entry-variant-list_item {
 .b-form input[type="submit"],
 .b-button {
   background: var(--blue);
-  border-radius: 3px;
   transition: background-color 0.1s linear;
   transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
 }
@@ -738,32 +827,7 @@ b {
   color: #fff;
 }
 
-/* Отзывы */
-
-.b-reviews_navigation .navigation-node-all,
-.b-reviews_navigation .navigation-node-positive,
-.b-reviews_navigation .navigation-node-neutral,
-.b-reviews_navigation .navigation-node-negative {
-  background-color: var(--background);
-}
-
-.b-reviews_navigation .navigation-node-all {
-  border-color: var(--blue);
-}
-
-.b-reviews_navigation .navigation-node-positive {
-  border-color: #65a528;
-}
-
-.b-reviews_navigation .navigation-node-neutral {
-  border-color: #40a2ff;
-}
-
-.b-reviews_navigation .navigation-node-negative {
-  border-color: #e06b74;
-}
-
-/* Адаптивность под мобильные устройства */
+/* --- Адаптивность под мобильные устройства --- */
 
 @media only screen and (min-width: 768px) {
   .p-profiles-show .profile-content .cc-2 > .c-column {
