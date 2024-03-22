@@ -69,11 +69,11 @@ h3 {
 
 /* Градиент переполнения выпадющего списка */
 .l-top_menu-v2 .global-search .search-results::before {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #111 100%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #1a1a1a 100%);
 }
 
 .l-top_menu-v2 .global-search .search-results::after {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #111 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1a1a1a 100%);
 }
 
 /* Цвет текста в элементах в выпадающем списке */
@@ -145,6 +145,59 @@ h3 {
 /* Цвет надписи "изменено" */
 .b-user_rate_log .action.update {
   color: var(--yellow);
+}
+
+/* -- Спойлер -- */
+
+/* Цвет кнопки спойлера */
+.b-spoiler_block > span {
+  background-color: var(--blue);
+}
+
+/* Цвет кнопки спойлера при наведении */
+.b-spoiler_block > span:hover {
+  background: var(--blue-hover);
+}
+
+/* Цвета открытого блока спойлера */
+.b-spoiler_block > div {
+  color: var(--background);
+  border-left: 4px solid var(--blue);
+  padding: 5px 10px;
+}
+
+.b-anime_status_tag.spoilers {
+  background-color: #d53026;
+  border: 1px solid #d53026;
+}
+
+/* Цвет строчного спойлера */
+.b-spoiler_inline:not(.is-opened) {
+  background-color: #6c6c6c;
+}
+
+/* Цвет строчного спойлера при наведении */
+.b-spoiler_inline:not(.is-opened):hover {
+  background-color: #7c7c7c;
+}
+
+/* Цвет строчного спойлера при открытии */
+.b-spoiler_inline:not(.is-opened):active {
+  background-color: #8c8c8c;
+}
+
+/* Цвет строчного спойлера в блочном спойлере */
+.b-spoiler_block .b-spoiler .content .inner {
+  color: var(--background);
+}
+
+/* -- Комментарии -- */
+
+/* Цвет грандиента переполнения для изображений */
+.b-height_shortener .shade {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), to(#1a1a1a));
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), #1a1a1a);
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0), #1a1a1a);
 }
 
 /* -- Отзывы -- */
@@ -249,44 +302,8 @@ h3 {
   opacity: 90%;
 }
 
-/* Спойлер */
-
-.b-spoiler_block > span {
-  background-color: var(--blue);
-}
-
-.b-spoiler_block > span:hover {
-  background: var(--blue-hover);
-}
-
-.b-spoiler_block > div {
-  color: var(--background);
-  border-left: 4px solid var(--blue);
-  padding: 5px 10px;
-}
-
-.b-anime_status_tag.spoilers {
-  background-color: #d53026;
-  border: 1px solid #d53026;
-}
-
-.b-spoiler_inline:not(.is-opened) {
-  background-color: #6c6c6c;
-}
-
-.b-spoiler_inline:not(.is-opened):hover {
-  background-color: #7c7c7c;
-}
-
-.b-spoiler_inline:not(.is-opened):active {
-  background-color: #8c8c8c;
-}
-
-/* ХЗ */
-
 .b-rate .stars-container,
 .l-top_menu-v2 .global-search input,
-.b-height_shortener .shade,
 .b-collection_search .field,
 .CodeMirror-vscrollbar,
 .b-main_search .input,
