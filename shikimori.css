@@ -5,15 +5,16 @@ html:root {
   --text-color1: #a4a9b7;
   --background: #1e2128;
   --black: #32363d;
+  --dirty-white: #abb2bf;
+  --white: #ffffff;
   --red: #e06b74;
-  --green: #98c379;
-  --yellow: #e5c07a;
+  --magenta: #c778dd;
   --blue: #0083ff;
   --blue-hover: #0069cc;
   --blue-active: #40a2ff;
-  --magenta: #c778dd;
   --cyan: #55b6c2;
-  --white: #abb2bf;
+  --green: #98c379;
+  --yellow: #d9d241;
 }
 
 .l-top_menu-v2 {
@@ -43,18 +44,13 @@ h3 {
 
 .collapsed {
   background: var(--background);
-  color: #fff;
+  color: var(--white);
   font-weight: 700;
 }
 
 /* --- Header --- */
 
 /* -- Выпадающее меню -- */
-
-/* Фон верхней части */
-.l-top_menu-v2 .menu-dropdown.main > span:not(.mobile) {
-  background: var(--background);
-}
 
 /* Фон выпадающего списка */
 .l-top_menu-v2 .submenu {
@@ -88,7 +84,7 @@ h3 {
   .search-results
   .b-db_entry-variant-list_item:first-child,
 .l-top_menu-v2 .global-search .search-results .search-mode:first-child {
-  color: #fff;
+  color: var(--white);
 }
 
 /* Градиент у выбранного элемента в выпадающем списке */
@@ -134,7 +130,21 @@ h3 {
 /* Цвет ключа (характеристика) */
 .b-catalog_entry-tooltip .inner .line .key,
 .b-db_entry-variant-list_item > .info .line .key {
-  color: #fff;
+  color: var(--white);
+}
+
+/* -- История -- */
+
+/* Логи */
+
+/* Цвет надписи "добавлено" */
+.b-user_rate_log .action.create {
+  color: #e3e3e3;
+}
+
+/* Цвет надписи "изменено" */
+.b-user_rate_log .action.update {
+  color: var(--yellow);
 }
 
 /* -- Отзывы -- */
@@ -211,14 +221,6 @@ h3 {
 .c-person > .cover > .title,
 .c-character > .cover > .title {
   text-align: center;
-}
-
-.b-user_rate_log .action.create {
-  color: #e3e3e3;
-}
-
-.b-user_rate_log .action.update {
-  color: #c7c42f;
 }
 
 .b-quote-v2 {
@@ -298,7 +300,7 @@ h3 {
 }
 
 .b-input input[disabled] {
-  color: #fff;
+  color: var(--white);
   background: #333;
   border-color: #333;
 }
@@ -311,7 +313,7 @@ h3 {
 .p-user_rates-index .list-groups .summary.posters.library {
   background: var(--background);
   border: none;
-  color: #fff;
+  color: var(--white);
 }
 
 .ac_results.menu-suggest .ac_even:hover,
@@ -467,7 +469,7 @@ div.b-db_entry-variant-list_item {
 }
 
 .p-user_rates-index .list-lines tr .name a:hover {
-  color: #fff;
+  color: var(--white);
 }
 
 .p-dashboards-show .cc-news .c-generated_news .b-topic,
@@ -493,7 +495,7 @@ div.b-db_entry-variant-list_item {
 
 .b-quote {
   background: var(--background) !important;
-  color: #fff !important;
+  color: var(--white) !important;
   border: 1px dashed;
 }
 
@@ -518,7 +520,7 @@ div.b-db_entry-variant-list_item {
 .b-add_to_list.on_hold .option,
 .b-add_to_list.dropped .trigger,
 .b-add_to_list.dropped .option {
-  color: #fff;
+  color: var(--white);
   background: var(--blue);
   border: none;
 }
@@ -528,7 +530,7 @@ div.b-db_entry-variant-list_item {
 .b-add_to_list.dropped .edit,
 .b-add_to_list.on_hold .edit,
 .b-add_to_list .expanded-options .remove-trigger .text {
-  color: #fff;
+  color: var(--white);
 }
 
 .b-link_button.dark:hover,
@@ -562,7 +564,7 @@ div.b-db_entry-variant-list_item {
 .p-user_rates-index .list-lines tr.edit-form form,
 .b-shiki_editor.previewed .body .preview,
 .b-hot_topics-v2 {
-  color: #fff;
+  color: var(--white);
   background: var(--background);
   border: none;
 }
@@ -575,7 +577,7 @@ div.b-db_entry-variant-list_item {
 
 .b-comments .comments-loader:hover,
 .b-comments .comments-expander:hover {
-  color: #fff;
+  color: var(--white);
   background: var(--blue);
   border: none;
 }
@@ -587,7 +589,7 @@ div.b-db_entry-variant-list_item {
 .b-topic .footer-vote {
   border: none;
   background: var(--background);
-  color: #fff;
+  color: var(--white);
 }
 
 .p-dashboards-show .cc-news .c-news_topics .b-topic,
@@ -654,7 +656,7 @@ header.head h2 a.back:before,
 .p-user_rates-index .list-lines tr.edit-form .b-input.text textarea,
 .b-bb_codes-examples .example .textarea {
   border: 1px solid #333;
-  color: #fff;
+  color: var(--white);
   background: var(--background);
 }
 
@@ -690,7 +692,7 @@ body[data-locale="ru"] .b-offtopic_marker.off:before {
 .CodeMirror pre,
 .cm-s-solarized.cm-s-light .CodeMirror-linenumber,
 .b-shiki_editor .body .editor textarea {
-  color: #fff;
+  color: var(--white);
   border: 0;
 }
 
@@ -701,7 +703,7 @@ body[data-locale="ru"] .b-offtopic_marker.off:before {
 
 .noUi-connects {
   background: var(--background);
-  color: #fff;
+  color: var(--white);
 }
 
 .b-edit_styles .body_background #body_background_input {
@@ -768,12 +770,12 @@ body[data-locale="ru"] .b-offtopic_marker.off:before {
 }
 
 div {
-  color: #fff;
+  color: var(--white);
 }
 
 header.head h1,
 header.head h2 {
-  color: #fff;
+  color: var(--white);
 }
 
 .b-feedback {
@@ -801,7 +803,7 @@ div.avatar img,
 .headline,
 .midheadline,
 .subheadline {
-  color: #fff;
+  color: var(--white);
   background: var(--background);
   border-left: 0;
 }
@@ -833,7 +835,7 @@ div.avatar img,
 }
 
 b {
-  color: #fff;
+  color: var(--white);
 }
 
 /* --- Адаптивность под мобильные устройства --- */
@@ -884,10 +886,6 @@ b {
 }
 
 @media screen and (max-width: 1024px) {
-  body {
-    background-size: auto !important;
-  }
-
   .p-profiles-show .b-feedback:after {
     display: none;
   }
