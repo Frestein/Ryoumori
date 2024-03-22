@@ -17,21 +17,6 @@ html:root {
   --yellow: #d9d241;
 }
 
-.l-top_menu-v2 {
-  position: sticky;
-  top: 0;
-}
-
-.l-top_menu-v2 .active .submenu {
-  max-height: calc(100vh - 46px);
-  overflow: auto;
-}
-
-::selection {
-  color: var(--background);
-  background: var(--blue);
-}
-
 /* Картинка на заднем фоне */
 body {
   background: url(https://sun9-1.userapi.com/impg/7ntQZJ1sWeJ9TaMRlpjqDujAMRZTxmQs_RuZzg/HxLPYNH6RbQ.jpg?size=1963x2048&quality=96&sign=01053d5c603dbb081984bf8445ea75d4&type=album)
@@ -42,6 +27,20 @@ h3 {
   color: var(--blue);
 }
 
+b {
+  color: var(--white);
+}
+
+div {
+  color: var(--white);
+}
+
+/* Цвет выделенных элементов */
+::selection {
+  color: var(--background);
+  background: var(--blue);
+}
+
 .collapsed {
   background: var(--background);
   color: var(--white);
@@ -49,6 +48,31 @@ h3 {
 }
 
 /* --- Header --- */
+
+/* Прилипший header при прокрутке */
+.l-top_menu-v2 {
+  position: sticky;
+  top: 0;
+  background: var(--background);
+  opacity: 0.9;
+  border: 0;
+}
+
+.l-top_menu-v2 .active .submenu {
+  max-height: calc(100vh - 46px);
+  overflow: auto;
+}
+
+.l-top_menu .menu-items .entry a,
+.l-top_menu .submenu > .entry,
+.b-main_search ul.popup {
+  background: var(--background);
+  border: 0;
+}
+
+.l-top_menu .menu-items > .entry > .contest {
+  display: none;
+}
 
 /* -- Выпадающее меню -- */
 
@@ -108,9 +132,13 @@ h3 {
     rgba(43, 138, 204, 0.01);
 }
 
-/* Боковой штрих слева у выбранного элемента в выпадающем списке */
-.l-top_menu-v2 .global-search .search-results .search-mode.active::before {
-  background: var(--blue-active);
+/* Цвет бокового штриха у выбранного элемента в выпадающем списке */
+.l-top_menu-v2 .global-search .search-results .search-mode.active::before,
+.l-top_menu-v2
+  .global-search
+  .search-results
+  .b-db_entry-variant-list_item.active::before {
+  background: var(--blue);
 }
 
 /* Иконка поиска */
@@ -125,12 +153,30 @@ h3 {
 
 /* --- Main --- */
 
+/* Основной блок */
+.l-page {
+  background: var(--background);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  opacity: 0.9;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
 /* -- Контейнер с информацией -- */
 
 /* Цвет ключа (характеристика) */
 .b-catalog_entry-tooltip .inner .line .key,
 .b-db_entry-variant-list_item > .info .line .key {
   color: var(--white);
+}
+
+/* -- Карточка человека/персонажа/тайтла -- */
+
+/* Центровка текста в миниатюре карточки человека/персонажа */
+.c-person > .cover > .title,
+.c-character > .cover > .title {
+  text-align: center;
 }
 
 /* -- История -- */
@@ -195,9 +241,19 @@ h3 {
 
 /* Цвет грандиента переполнения для изображений */
 .b-height_shortener .shade {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), to(#1a1a1a));
-  background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), #1a1a1a);
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0), #1a1a1a);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(255, 255, 255, 0)),
+    to(#1a1a1a)
+  );
+  background-image: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0),
+    #1a1a1a
+  );
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1a1a1a);
 }
 
 /* -- Отзывы -- */
@@ -270,11 +326,6 @@ h3 {
 }
 
 /* ХЗ */
-
-.c-person > .cover > .title,
-.c-character > .cover > .title {
-  text-align: center;
-}
 
 .b-quote-v2 {
   border-left: 4px solid var(--blue);
@@ -786,10 +837,6 @@ body[data-locale="ru"] .b-offtopic_marker.off:before {
   background: var(--blue);
 }
 
-div {
-  color: var(--white);
-}
-
 header.head h1,
 header.head h2 {
   color: var(--white);
@@ -799,6 +846,7 @@ header.head h2 {
   visibility: hidden;
 }
 
+/* Скругление аватарок */
 .avatar,
 div.avatar img,
 .p-user_rates-index .l-menu .avatar img,
@@ -825,37 +873,7 @@ div.avatar img,
   border-left: 0;
 }
 
-.l-page {
-  background: var(--background);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 3px;
-  opacity: 0.9;
-  margin-top: 14px;
-  margin-bottom: 14px;
-}
-
-.l-top_menu-v2 {
-  background: var(--background);
-  opacity: 0.9;
-  border: 0;
-}
-
-.l-top_menu .menu-items .entry a,
-.l-top_menu .submenu > .entry,
-.b-main_search ul.popup {
-  background: var(--background);
-  border: 0;
-}
-
-.l-top_menu .menu-items > .entry > .contest {
-  display: none;
-}
-
-b {
-  color: var(--white);
-}
-
-/* --- Адаптивность под мобильные устройства --- */
+/* --- Адаптация под мобильные устройства --- */
 
 @media only screen and (min-width: 768px) {
   .p-profiles-show .profile-content .cc-2 > .c-column {
