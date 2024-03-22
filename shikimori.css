@@ -71,6 +71,15 @@ h3 {
   background-color: var(--background);
 }
 
+/* Градиент переполнения выпадющего списка */
+.l-top_menu-v2 .global-search .search-results::before {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #111 100%);
+}
+
+.l-top_menu-v2 .global-search .search-results::after {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #111 100%);
+}
+
 /* Цвет текста в элементах в выпадающем списке */
 .l-top_menu-v2 .global-search .search-results .search-mode,
 .l-top_menu-v2 .global-search .search-results .nothing_found:first-child,
@@ -118,7 +127,7 @@ h3 {
   color: var(--blue-active);
 }
 
-/* Main */
+/* --- Main --- */
 
 /* -- Контейнер с информацией -- */
 
