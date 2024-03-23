@@ -1,21 +1,29 @@
+/* ----- Цветовая палитра ----- */
 html:root {
+  /* Переопределение цветов всех ссылок */
   --link-color: #0083ff;
   --link-hover-color: #0069cc;
   --link-active-color: #40a2ff;
-  --text-color1: #a4a9b7;
+  /* Основная палитра цветов */
   --background: #1e2128;
-  --black: #32363d;
-  --dirty-white: #abb2bf;
   --white: #ffffff;
-  --red: #e06b74;
-  --magenta: #c778dd;
   --blue: #0083ff;
   --blue-hover: #0069cc;
   --blue-active: #40a2ff;
-  --cyan: #55b6c2;
+  --positive: #65a528;
+  --neutral: #40a2ff;
+  --negative: #e06b74;
+  /* Дополнительные цвета */
+  --input: #333333;
+  --black: #32363d;
+  --small-button: #555555;
+  --dirty-white: #abb2bf;
+  --magenta: #c778dd;
   --green: #98c379;
   --yellow: #d9d241;
 }
+
+/* ----- Общие стили ----- */
 
 /* Картинка на заднем фоне */
 body {
@@ -23,14 +31,17 @@ body {
     center top 10% / cover fixed var(--background) !important;
 }
 
+/* Переопределение цвета заголовков */
 h3 {
   color: var(--blue);
 }
 
+/* Переопределение цвета жирного текста */
 b {
   color: var(--white);
 }
 
+/* Переопределение цвета текста во всех контейнерах */
 div {
   color: var(--white);
 }
@@ -47,7 +58,7 @@ div {
   font-weight: 700;
 }
 
-/* --- Header --- */
+/* ---- Header ---- */
 
 /* Прилипший header при прокрутке */
 .l-top_menu-v2 {
@@ -74,7 +85,7 @@ div {
   display: none;
 }
 
-/* -- Выпадающее меню -- */
+/* --- Выпадающее меню --- */
 
 /* Фон выпадающего списка */
 .l-top_menu-v2 .submenu {
@@ -84,18 +95,19 @@ div {
   border-right: 1px solid var(--background);
 }
 
-/* -- Поиск -- */
+/* --- Поиск --- */
 
 /* Фон выпадающего списка */
 .l-top_menu-v2 .global-search .search-results {
   background-color: var(--background);
 }
 
-/* Градиент переполнения выпадющего списка */
+/* Градиент переполнения выпадющего списка (сверху) */
 .l-top_menu-v2 .global-search .search-results::before {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #1a1a1a 100%);
 }
 
+/* Градиент переполнения выпадющего списка (снизу) */
 .l-top_menu-v2 .global-search .search-results::after {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1a1a1a 100%);
 }
@@ -151,7 +163,7 @@ div {
   color: var(--blue-active);
 }
 
-/* --- Main --- */
+/* ---- Main ---- */
 
 /* Основной блок */
 .l-page {
@@ -169,7 +181,7 @@ div {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* -- Контейнер с информацией -- */
+/* --- Контейнер с информацией --- */
 
 /* Цвет ключа (характеристика) */
 .b-catalog_entry-tooltip .inner .line .key,
@@ -177,7 +189,7 @@ div {
   color: var(--white);
 }
 
-/* -- Карточка человека/персонажа/тайтла -- */
+/* --- Карточка человека/персонажа/тайтла --- */
 
 /* Центровка текста в миниатюре карточки человека/персонажа */
 .c-person > .cover > .title,
@@ -185,9 +197,9 @@ div {
   text-align: center;
 }
 
-/* -- История -- */
+/* --- История --- */
 
-/* Логи */
+/* -- Логи -- */
 
 /* Цвет надписи "добавлено" */
 .b-user_rate_log .action.create {
@@ -199,7 +211,7 @@ div {
   color: var(--yellow);
 }
 
-/* -- Спойлер -- */
+/* --- Спойлер --- */
 
 /* Цвет кнопки спойлера */
 .b-spoiler_block > span {
@@ -223,11 +235,6 @@ div {
   color: var(--background);
 }
 
-.b-anime_status_tag.spoilers {
-  background-color: #d53026;
-  border: 1px solid #d53026;
-}
-
 /* Цвет строчного спойлера */
 .b-spoiler_inline:not(.is-opened) {
   background-color: #6c6c6c;
@@ -248,7 +255,15 @@ div {
   color: var(--background);
 }
 
-/* -- Комментарии -- */
+/* --- Теги --- */
+
+/* Переопредление цвета тега "спойлер" */
+.b-anime_status_tag.spoilers {
+  background-color: #d53026;
+  border: 1px solid #d53026;
+}
+
+/* --- Комментарии --- */
 
 /* Цвет грандиента переполнения для изображений */
 .b-height_shortener .shade {
@@ -267,9 +282,9 @@ div {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1a1a1a);
 }
 
-/* -- Отзывы -- */
+/* ----- Отзывы ----- */
 
-/* Меню выбора отзывов */
+/* --- Меню выбора отзывов --- */
 
 /* Цвет фона меню выбора отзывов */
 .b-reviews_navigation .navigation-node-all,
@@ -292,7 +307,7 @@ div {
   .navigation-node-neutral:not(.is-active):not(.is-empty):hover,
 .b-reviews_navigation
   .navigation-node-negative:not(.is-active):not(.is-empty):hover {
-  background-color: #292d37;
+  background-color: var(--black);
 }
 
 /* Цвет бокового штриха (ВСЕ ОТЗЫВЫ) */
@@ -302,27 +317,27 @@ div {
 
 /* Цвет бокового штриха (ПОЛОЖИТЕЛЬНЫЕ) */
 .b-reviews_navigation .navigation-node-positive {
-  border-color: #65a528;
+  border-color: var(--positive);
 }
 
 /* Цвет бокового штриха (НЕЙТРАЛЬНЫЕ) */
 .b-reviews_navigation .navigation-node-neutral {
-  border-color: #40a2ff;
+  border-color: var(--neutral);
 }
 
 /* Цвет бокового штриха (ОТРИЦАТЕЛЬНЫЕ) */
 .b-reviews_navigation .navigation-node-negative {
-  border-color: #e06b74;
+  border-color: var(--negative);
 }
 
-/* Оценка на отзыв */
+/* --- Оценка на отзыв --- */
 
 /* Цвет фона оценки на отзыв */
 .b-footer_vote {
   background-color: var(--background);
 }
 
-/* Управление отзывами */
+/* --- Управление отзывами --- */
 
 /* Цвет фона кнопки "Ко всем отзывам" */
 .b-link_button.blue {
@@ -380,8 +395,8 @@ div {
 
 .b-input input[disabled] {
   color: var(--white);
-  background: #333;
-  border-color: #333;
+  background: var(--input);
+  border-color: var(--input);
 }
 
 .ac_results.menu-suggest .ac_even,
@@ -563,7 +578,7 @@ div.b-db_entry-variant-list_item {
 }
 
 .p-user_rates-index .list-groups .summary.lines.library {
-  border-color: #333;
+  border-color: var(--input);
 }
 
 .b-list li {
@@ -734,13 +749,13 @@ header.head h2 a.back:before,
 
 .p-user_rates-index .list-lines tr.edit-form .b-input.text textarea,
 .b-bb_codes-examples .example .textarea {
-  border: 1px solid #333;
+  border: 1px solid var(--input);
   color: var(--white);
   background: var(--background);
 }
 
 .p-user_rates-index .list-lines tr td .new-value input {
-  background: #333;
+  background: var(--input);
   border: none;
 }
 
