@@ -58,6 +58,21 @@ div {
   font-weight: 700;
 }
 
+/* Скругление аватарок */
+.avatar,
+div.avatar img,
+.p-user_rates-index .l-menu .avatar img,
+.b-user.avatar img,
+.b-user.named_avatar img,
+.b-user.avatar_fixed_margin img,
+.b-comment > .inner header img,
+.b-user.detailed .info .image-name .image,
+.b-dialog > .inner header img,
+.b-message > .inner header img,
+.l-top_menu-v2 .menu-dropdown.profile > span img {
+  border-radius: 50%;
+}
+
 /* ---- Header ---- */
 
 /* Прилипший header при прокрутке */
@@ -351,7 +366,7 @@ div {
   border-color: var(--blue-hover);
 }
 
-/* ХЗ */
+/* Когда-то там были комментарии, но теперь там живут драконы */
 
 .b-quote-v2 {
   border-left: 4px solid var(--blue);
@@ -872,21 +887,6 @@ header.head h2 {
   visibility: hidden;
 }
 
-/* Скругление аватарок */
-.avatar,
-div.avatar img,
-.p-user_rates-index .l-menu .avatar img,
-.b-user.avatar img,
-.b-user.named_avatar img,
-.b-user.avatar_fixed_margin img,
-.b-comment > .inner header img,
-.b-user.detailed .info .image-name .image,
-.b-dialog > .inner header img,
-.b-message > .inner header img,
-.l-top_menu-v2 .menu-dropdown.profile > span img {
-  border-radius: 50%;
-}
-
 .ac_results .character-suggest .avatar {
   border-radius: 0;
 }
@@ -899,7 +899,7 @@ div.avatar img,
   border-left: 0;
 }
 
-/* --- Адаптация под мобильные устройства --- */
+/* ----- Адаптивная верстка под экраны с меньшим разрешением ----- */
 
 @media only screen and (min-width: 768px) {
   .p-profiles-show .profile-content .cc-2 > .c-column {
