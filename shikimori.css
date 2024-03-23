@@ -218,6 +218,11 @@ div {
   padding: 5px 10px;
 }
 
+/* Цвет текста в большом блоке спойлера */
+.b-spoiler_block > div > div {
+  color: var(--background);
+}
+
 .b-anime_status_tag.spoilers {
   background-color: #d53026;
   border: 1px solid #d53026;
