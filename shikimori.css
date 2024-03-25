@@ -297,6 +297,50 @@ div.avatar img,
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1a1a1a);
 }
 
+/* ----- Главная ----- */
+
+/* Измение цвета заголовков разделов */
+.headline,
+.p-dashboards-show .v2 .headline.magenta a,
+.midheadline,
+.subheadline {
+  color: var(--white);
+  background: var(--background);
+  border-left: 0;
+}
+
+/* --- Пользовательские секции ---*/
+
+/* -- Карточка последней активности из истории -- */
+
+/* Изменение цвета карточки */
+.p-dashboards-show .v2 .my-list {
+  background: var(--background);
+  border-color: var(--white);
+}
+
+/* Изменение цвета "Мой список" */
+.p-dashboards-show .v2 .my-list .label span {
+  color: var(--white);
+}
+
+/* Изменение цвета названия заголовка тайтла */
+.b-user_rate-history .title {
+  color: var(--blue);
+}
+
+/* Изменение цвета названия заголовка тайтла при наведении */
+.b-user_rate-history:hover .title {
+  color: var(--blue-hover);
+}
+
+/* Изменение цвета статуса тайтла */
+.b-user_rate-history .status-counter .status {
+  color: var(--blue);
+}
+
+/* ----- Профиль ----- */
+
 /* ----- Отзывы ----- */
 
 /* --- Меню выбора отзывов --- */
@@ -889,14 +933,6 @@ header.head h2 {
 
 .ac_results .character-suggest .avatar {
   border-radius: 0;
-}
-
-.headline,
-.midheadline,
-.subheadline {
-  color: var(--white);
-  background: var(--background);
-  border-left: 0;
 }
 
 /* ----- Адаптивная верстка под экраны с меньшим разрешением ----- */
