@@ -20,7 +20,7 @@ To compile the Ryoumori theme, follow these steps:
 ## Usage
 
 ```
-@import url('https://github.com/Frestein/Ryoumori/css/ryoumori.min.css');
+@import url('https://cdn.rawgit.com/Frestein/Ryoumori/main/css/ryoumori.min.css');
 ```
 
 ## Customization
