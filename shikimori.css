@@ -17,10 +17,10 @@ html:root {
   /* Дополнительные цвета */
   --black: #32363d;
   --dirty-white: #abb2bf;
+  --dirty-white-hover: #8a93a6;
   --magenta: #c778dd;
   --green: #98c379;
-  --yellow: #d9d241;
-  --orange: #E5C07A;
+  --orange: #e5c07a;
 }
 
 /* ----- Общие стили ----- */
@@ -223,7 +223,32 @@ div.avatar img,
 
 /* Цвет надписи "изменено" */
 .b-user_rate_log .action.update {
-  color: var(--yellow);
+  color: var(--magenta);
+}
+
+/* Цвет надписи "удалено" */
+.b-user_rate_log .action.destroy {
+  color: var(--negative);
+}
+
+/* Цвет надписи "подробности" */
+.b-user_rate_log .spoiler.collapsed > span {
+  color: var(--white);
+}
+
+/* Цвет надписи "подробности" при наведении */
+.b-user_rate_log .spoiler.collapsed > span:hover {
+  color: var(--dirty-white);
+}
+
+/* Цвет надписи "спрятать" */
+.b-user_rate_log .spoiler.collapse > span {
+  color: var(--dirty-white);
+}
+
+/* Цвет надписи "спрятать" при наведении */
+.b-user_rate_log .spoiler.collapse span:hover {
+  color: var(--dirty-white-hover);
 }
 
 /* --- Спойлер --- */
@@ -354,7 +379,7 @@ div.avatar img,
 /* Изменение цвета показателя просмотренных/прочитанных */
 .b-stats_bar.anime .bar .first,
 .b-stats_bar.manga .bar .first {
-  background: var(--positive);
+  background: var(--green);
   color: var(--background);
   font-weight: bold;
 }
@@ -375,26 +400,21 @@ div.avatar img,
   font-weight: bold;
 }
 
-
 .b-stats_bar .stat_names .stat_name[data-type="planned"] a {
   color: var(--orange);
 }
-
 
 .b-stats_bar .stat_names .stat_name[data-type="watching"] a {
   color: var(--blue);
 }
 
-
 .b-stats_bar .stat_names .stat_name[data-type="completed"] a {
   color: var(--green);
 }
 
-
 .b-stats_bar .stat_names .stat_name[data-type="on_hold"] a {
-  color: var(--yellow);
+  color: var(--dirty-white);
 }
-
 
 .b-stats_bar .stat_names .stat_name[data-type="dropped"] a {
   color: var(--negative);
@@ -405,8 +425,14 @@ div.avatar img,
   color: var(--white);
 }
 
+/* Измение цвета надписи "комментарий(и)" */
 .p-profiles .profile-head .c-info .c-additionals div a {
   color: var(--dirty-white);
+}
+
+/* Измение цвета надписи "комментарий(и)" при наведении */
+.p-profiles .profile-head .c-info .c-additionals div a:hover {
+  color: var(--dirty-white-hover);
 }
 
 /* ---- Секция "Время за аниме и мангой" ---- */
