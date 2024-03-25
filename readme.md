@@ -5,8 +5,8 @@ Ryoumori is a custom theme for the Shikimori anime and manga tracker. This docum
 
 Before you can compile the Ryoumori theme, you need to have the following software installed on your computer:
 
-- Sass (SCSS) compiler
-- Node.js and npm package manager (optional, but recommended)
+- Node.js
+- npm package manager
 
 ## Installation
 
