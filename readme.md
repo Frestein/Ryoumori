@@ -35,7 +35,7 @@ Contributions to Ryoumori are welcome! If you find a bug or want to suggest an i
 
 ## License
 
-Ryoumori is licensed under the ISC license.
+Ryoumori is licensed under the ISC license. See the [LICENSE](LICENSE) file for details.
 
 ## Support
 
