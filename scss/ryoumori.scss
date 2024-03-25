@@ -1,26 +1,25 @@
 /* ----- Цветовая палитра ----- */
+$background: #1e2128;
+$white: #ffffff;
+$blue: #0083ff;
+$blue-hover: #0069cc;
+$blue-active: #40a2ff;
+$positive: #65a528;
+$neutral: #40a2ff;
+$negative: #e06b74;
+$input: #333333;
+$black: #32363d;
+$dirty-white: #abb2bf;
+$dirty-white-hover: #8a93a6;
+$magenta: #c778dd;
+$green: #98c379;
+$orange: #e5c07a;
+
+/* Переопределение цветов всех ссылок */
 html:root {
-  /* Переопределение цветов всех ссылок */
-  --link-color: #0083ff;
-  --link-hover-color: #0069cc;
-  --link-active-color: #40a2ff;
-  /* Основная палитра цветов */
-  --background: #1e2128;
-  --white: #ffffff;
-  --blue: #0083ff;
-  --blue-hover: #0069cc;
-  --blue-active: #40a2ff;
-  --positive: #65a528;
-  --neutral: #40a2ff;
-  --negative: #e06b74;
-  --input: #333333;
-  /* Дополнительные цвета */
-  --black: #32363d;
-  --dirty-white: #abb2bf;
-  --dirty-white-hover: #8a93a6;
-  --magenta: #c778dd;
-  --green: #98c379;
-  --orange: #e5c07a;
+  --link-color: #{$blue};
+  --link-hover-color: #{$blue-hover};
+  --link-active-color: #{$blue-active};
 }
 
 /* ----- Общие стили ----- */
@@ -28,33 +27,33 @@ html:root {
 /* Картинка на заднем фоне */
 body {
   background: url(https://sun9-1.userapi.com/impg/7ntQZJ1sWeJ9TaMRlpjqDujAMRZTxmQs_RuZzg/HxLPYNH6RbQ.jpg?size=1963x2048&quality=96&sign=01053d5c603dbb081984bf8445ea75d4&type=album)
-    center top 10% / cover fixed var(--background) !important;
+    center top 10% / cover fixed $background !important;
 }
 
 /* Переопределение цвета заголовков */
 h3 {
-  color: var(--blue);
+  color: $blue;
 }
 
 /* Переопределение цвета жирного текста */
 b {
-  color: var(--white);
+  color: $white;
 }
 
 /* Переопределение цвета текста во всех контейнерах */
 div {
-  color: var(--white);
+  color: $white;
 }
 
 /* Цвет выделенных элементов */
 ::selection {
-  color: var(--background);
-  background: var(--blue);
+  color: $background;
+  background: $blue;
 }
 
 .collapsed {
-  background: var(--background);
-  color: var(--white);
+  background: $background;
+  color: $white;
   font-weight: 700;
 }
 
@@ -79,7 +78,7 @@ div.avatar img,
 .l-top_menu-v2 {
   position: sticky;
   top: 0;
-  background: var(--background);
+  background: $background;
   opacity: 0.9;
   border: 0;
 }
@@ -92,7 +91,7 @@ div.avatar img,
 .l-top_menu .menu-items .entry a,
 .l-top_menu .submenu > .entry,
 .b-main_search ul.popup {
-  background: var(--background);
+  background: $background;
   border: 0;
 }
 
@@ -104,17 +103,17 @@ div.avatar img,
 
 /* Фон выпадающего списка */
 .l-top_menu-v2 .submenu {
-  background: var(--background);
-  border-bottom: 1px solid var(--background);
-  border-left: 1px solid var(--background);
-  border-right: 1px solid var(--background);
+  background: $background;
+  border-bottom: 1px solid $background;
+  border-left: 1px solid $background;
+  border-right: 1px solid $background;
 }
 
 /* --- Поиск --- */
 
 /* Фон выпадающего списка */
 .l-top_menu-v2 .global-search .search-results {
-  background-color: var(--background);
+  background-color: $background;
 }
 
 /* Градиент переполнения выпадющего списка (сверху) */
@@ -135,7 +134,7 @@ div.avatar img,
   .search-results
   .b-db_entry-variant-list_item:first-child,
 .l-top_menu-v2 .global-search .search-results .search-mode:first-child {
-  color: var(--white);
+  color: $white;
 }
 
 /* Градиент у выбранного элемента в выпадающем списке */
@@ -165,24 +164,24 @@ div.avatar img,
   .global-search
   .search-results
   .b-db_entry-variant-list_item.active::before {
-  background: var(--blue);
+  background: $blue;
 }
 
 /* Иконка поиска */
 .l-top_menu-v2 .global-search .search-marker {
-  color: var(--background);
+  color: $background;
 }
 
 /* Иконка поиска (активен) */
 .l-top_menu-v2.is-search-focus .global-search .search-marker {
-  color: var(--blue-active);
+  color: $blue-active;
 }
 
 /* ---- Main ---- */
 
 /* Основной блок */
 .l-page {
-  background: var(--background);
+  background: $background;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   opacity: 0.9;
@@ -192,7 +191,7 @@ div.avatar img,
 
 /* Выпадающий блок с подробной информацией */
 .tipsy-inner {
-  background: var(--background);
+  background: $background;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -201,7 +200,7 @@ div.avatar img,
 /* Цвет ключа (характеристика) */
 .b-catalog_entry-tooltip .inner .line .key,
 .b-db_entry-variant-list_item > .info .line .key {
-  color: var(--white);
+  color: $white;
 }
 
 /* --- Карточка человека/персонажа/тайтла --- */
@@ -223,56 +222,56 @@ div.avatar img,
 
 /* Цвет надписи "изменено" */
 .b-user_rate_log .action.update {
-  color: var(--magenta);
+  color: $magenta;
 }
 
 /* Цвет надписи "удалено" */
 .b-user_rate_log .action.destroy {
-  color: var(--negative);
+  color: $negative;
 }
 
 /* Цвет надписи "подробности" */
 .b-user_rate_log .spoiler.collapsed > span {
-  color: var(--white);
+  color: $white;
 }
 
 /* Цвет надписи "подробности" при наведении */
 .b-user_rate_log .spoiler.collapsed > span:hover {
-  color: var(--dirty-white);
+  color: $dirty-white;
 }
 
 /* Цвет надписи "спрятать" */
 .b-user_rate_log .spoiler.collapse > span {
-  color: var(--dirty-white);
+  color: $dirty-white;
 }
 
 /* Цвет надписи "спрятать" при наведении */
 .b-user_rate_log .spoiler.collapse span:hover {
-  color: var(--dirty-white-hover);
+  color: $dirty-white-hover;
 }
 
 /* --- Спойлер --- */
 
 /* Цвет кнопки спойлера */
 .b-spoiler_block > span {
-  background-color: var(--blue);
+  background-color: $blue;
 }
 
 /* Цвет кнопки спойлера при наведении */
 .b-spoiler_block > span:hover {
-  background: var(--blue-hover);
+  background: $blue-hover;
 }
 
 /* Цвета открытого блока спойлера */
 .b-spoiler_block > div {
-  color: var(--background);
-  border-left: 4px solid var(--blue);
+  color: $background;
+  border-left: 4px solid $blue;
   padding: 5px 10px;
 }
 
 /* Цвет текста в большом блоке спойлера */
 .b-spoiler_block > div > div {
-  color: var(--background);
+  color: $background;
 }
 
 /* Цвет строчного спойлера */
@@ -292,7 +291,7 @@ div.avatar img,
 
 /* Цвет строчного спойлера в блочном спойлере */
 .b-spoiler_block .b-spoiler .content .inner {
-  color: var(--background);
+  color: $background;
 }
 
 /* --- Теги --- */
@@ -329,8 +328,8 @@ div.avatar img,
 .p-dashboards-show .v2 .headline.magenta a,
 .midheadline,
 .subheadline {
-  color: var(--white);
-  background: var(--background);
+  color: $white;
+  background: $background;
   border-left: 0;
 }
 
@@ -340,23 +339,23 @@ div.avatar img,
 
 /* Изменение цвета карточки */
 .p-dashboards-show .v2 .my-list {
-  background: var(--background);
-  border-color: var(--white);
+  background: $background;
+  border-color: $white;
 }
 
 /* Изменение цвета "Мой список" */
 .p-dashboards-show .v2 .my-list .label span {
-  color: var(--white);
+  color: $white;
 }
 
 /* Изменение цвета названия заголовка тайтла при наведении */
 .b-user_rate-history:hover .title {
-  color: var(--blue-hover);
+  color: $blue-hover;
 }
 
 /* Изменение цвета статуса тайтла */
 .b-user_rate-history .status-counter .status {
-  color: var(--blue);
+  color: $blue;
 }
 
 /* ----- Профиль ----- */
@@ -373,78 +372,78 @@ div.avatar img,
   .b-stats_bar
   .compatibility
   span.link-replacement {
-  color: var(--white);
+  color: $white;
 }
 
 /* Изменение цвета показателя просмотренных/прочитанных */
 .b-stats_bar.anime .bar .first,
 .b-stats_bar.manga .bar .first {
-  background: var(--green);
-  color: var(--background);
+  background: $green;
+  color: $background;
   font-weight: bold;
 }
 
 /* Изменение цвета показателя запланированных */
 .b-stats_bar.anime .bar .second,
 .b-stats_bar.manga .bar .second {
-  background: var(--orange);
-  color: var(--background);
+  background: $orange;
+  color: $background;
   font-weight: bold;
 }
 
 /* Изменение цвета показателя брошенных */
 .b-stats_bar.anime .bar .third,
 .b-stats_bar.manga .bar .third {
-  background: var(--negative);
-  color: var(--background);
+  background: $negative;
+  color: $background;
   font-weight: bold;
 }
 
 .b-stats_bar .stat_names .stat_name[data-type="planned"] a {
-  color: var(--orange);
+  color: $orange;
 }
 
 .b-stats_bar .stat_names .stat_name[data-type="watching"] a {
-  color: var(--blue);
+  color: $blue;
 }
 
 .b-stats_bar .stat_names .stat_name[data-type="completed"] a {
-  color: var(--green);
+  color: $green;
 }
 
 .b-stats_bar .stat_names .stat_name[data-type="on_hold"] a {
-  color: var(--dirty-white);
+  color: $dirty-white;
 }
 
 .b-stats_bar .stat_names .stat_name[data-type="dropped"] a {
-  color: var(--negative);
+  color: $negative;
 }
 
 /* Изменение цвета надписи "Активность" */
 .p-profiles .profile-head .c-info .c-additionals b {
-  color: var(--white);
+  color: $white;
 }
 
 /* Измение цвета надписи "комментарий(и)" */
 .p-profiles .profile-head .c-info .c-additionals div a {
-  color: var(--dirty-white);
+  color: $dirty-white;
 }
 
 /* Измение цвета надписи "комментарий(и)" при наведении */
 .p-profiles .profile-head .c-info .c-additionals div a:hover {
-  color: var(--dirty-white-hover);
+  color: $dirty-white-hover;
 }
 
 /* ---- Секция "Время за аниме и мангой" ---- */
 
 /* Изменение цвета заголовка секции */
 .p-profiles-show .profile-content .activity .title {
-  color: var(--white);
+  color: $white;
 }
 
 /* Измение цвета индикатора рубежа пройденного времени */
 .b-stats_bar.lifetime .bar .first {
-  background: var(--green);
+  background: $green;
 }
 
 /* Изменение цвета рубежа пройденного времени */
@@ -455,43 +454,43 @@ div.avatar img,
 /* ---- Секция "Активность на сайте" ---- */
 
 .bar.simple .bar.s3 {
-  background: var(--blue-hover);
+  background: $blue-hover;
   transition: background-color 0.1s linear;
   transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
 }
 
 .bar.simple .bar:hover.s3 {
-  background: var(--blue);
+  background: $blue;
 }
 
 .bar.simple .bar.s2 {
-  background: var(--blue-hover);
+  background: $blue-hover;
   transition: background-color 0.1s linear;
   transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
 }
 
 .bar.simple .bar:hover.s2 {
-  background: var(--blue);
+  background: $blue;
 }
 
 .bar.simple .bar.s1 {
-  background: var(--blue-hover);
+  background: $blue-hover;
   transition: background-color 0.1s linear;
   transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
 }
 
 .bar.simple .bar:hover.s1 {
-  background: var(--blue);
+  background: $blue;
 }
 
 .bar.simple .bar.s0 {
-  background: var(--blue-hover);
+  background: $blue-hover;
   transition: background-color 0.1s linear;
   transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
 }
 
 .bar.simple .bar:hover.s0 {
-  background: var(--blue-hover);
+  background: $blue-hover;
 }
 
 /* ----- Отзывы ----- */
@@ -503,7 +502,7 @@ div.avatar img,
 .b-reviews_navigation .navigation-node-positive,
 .b-reviews_navigation .navigation-node-neutral,
 .b-reviews_navigation .navigation-node-negative {
-  background-color: var(--background);
+  background-color: $background;
 }
 
 /* Цвет текста неактивного элемента в меню выбора отзывов */
@@ -519,70 +518,70 @@ div.avatar img,
   .navigation-node-neutral:not(.is-active):not(.is-empty):hover,
 .b-reviews_navigation
   .navigation-node-negative:not(.is-active):not(.is-empty):hover {
-  background-color: var(--black);
+  background-color: $black;
 }
 
 /* Цвет бокового штриха (ВСЕ ОТЗЫВЫ) */
 .b-reviews_navigation .navigation-node-all {
-  border-color: var(--blue);
+  border-color: $blue;
 }
 
 /* Цвет бокового штриха (ПОЛОЖИТЕЛЬНЫЕ) */
 .b-reviews_navigation .navigation-node-positive {
-  border-color: var(--positive);
+  border-color: $positive;
 }
 
 /* Цвет бокового штриха (НЕЙТРАЛЬНЫЕ) */
 .b-reviews_navigation .navigation-node-neutral {
-  border-color: var(--neutral);
+  border-color: $neutral;
 }
 
 /* Цвет бокового штриха (ОТРИЦАТЕЛЬНЫЕ) */
 .b-reviews_navigation .navigation-node-negative {
-  border-color: var(--negative);
+  border-color: $negative;
 }
 
 /* --- Оценка на отзыв --- */
 
 /* Цвет фона оценки на отзыв */
 .b-footer_vote {
-  background-color: var(--background);
+  background-color: $background;
 }
 
 /* --- Управление отзывами --- */
 
 /* Цвет фона кнопки "Ко всем отзывам" */
 .b-link_button.blue {
-  background-color: var(--blue);
-  border-color: var(--blue);
+  background-color: $blue;
+  border-color: $blue;
 }
 
 /* Цвет фона кнопки "Ко всем отзывам" при наведении */
 .b-link_button.blue:hover {
-  background-color: var(--blue-hover);
-  border-color: var(--blue-hover);
+  background-color: $blue-hover;
+  border-color: $blue-hover;
 }
 
 /* Когда-то там были комментарии, но теперь там живут драконы */
 
 .b-quote-v2 {
-  border-left: 4px solid var(--blue);
+  border-left: 4px solid $blue;
   padding: 5px 10px;
 }
 
 .b-quote-v2 > .quote-content {
-  color: var(--background);
+  color: $background;
 }
 
 .b-news_wall-topic .title {
-  color: var(--blue);
+  color: $blue;
 }
 
 .b-news_wall-topic .status-line .comments,
 .b-news_wall-topic .status-line .is-pinned,
 .b-status-line .section.created_at time:before,
 .b-status-line .section.main .comments:before {
-  color: var(--dirty-white);
+  color: $dirty-white;
 }
 
 .b-anime_status_tag.other {
@@ -606,9 +605,9 @@ div.avatar img,
 }
 
 .b-input input[disabled] {
-  color: var(--white);
-  background: var(--input);
-  border-color: var(--input);
+  color: $white;
+  background: $input;
+  border-color: $input;
 }
 
 .ac_results.menu-suggest .ac_even,
@@ -617,14 +616,14 @@ div.avatar img,
 .b-table td,
 .p-user_rates-index .list-groups .summary.posters.list,
 .p-user_rates-index .list-groups .summary.posters.library {
-  background: var(--background);
+  background: $background;
   border: none;
-  color: var(--white);
+  color: $white;
 }
 
 .ac_results.menu-suggest .ac_even:hover,
 .ac_results.menu-suggest .ac_odd:hover {
-  background: var(--blue);
+  background: $blue;
 }
 
 .b-video_variant .video-quality.bd {
@@ -737,7 +736,7 @@ header.head a.edit,
 .b-topic.aside-expanded > .inner aside.buttons .main-controls .item-ignore,
 .b-topic.aside-expanded > .inner aside.buttons .main-controls .item-reply,
 .b-topic.aside-expanded > .inner aside.buttons .main-controls .item-cancel {
-  color: var(--blue);
+  color: $blue;
   font-weight: 700;
   border: none;
 }
@@ -759,12 +758,12 @@ div.b-db_entry-variant-list_item {
 }
 
 .p-user_rates-index .list-lines tr .name a {
-  color: var(--blue);
+  color: $blue;
   font-weight: 700;
 }
 
 .p-user_rates-index .list-lines tr .name a:hover {
-  color: var(--white);
+  color: $white;
 }
 
 .p-dashboards-show .cc-news .c-generated_news .b-topic,
@@ -779,18 +778,18 @@ div.b-db_entry-variant-list_item {
 }
 
 .p-user_rates-index .list-groups .summary.lines.library {
-  border-color: var(--input);
+  border-color: $input;
 }
 
 .b-list li {
-  color: var(--blue);
+  color: $blue;
   list-style-image: none;
   list-style: disc;
 }
 
 .b-quote {
-  background: var(--background) !important;
-  color: var(--white) !important;
+  background: $background !important;
+  color: $white !important;
   border: 1px dashed;
 }
 
@@ -815,8 +814,8 @@ div.b-db_entry-variant-list_item {
 .b-add_to_list.on_hold .option,
 .b-add_to_list.dropped .trigger,
 .b-add_to_list.dropped .option {
-  color: var(--white);
-  background: var(--blue);
+  color: $white;
+  background: $blue;
   border: none;
 }
 
@@ -825,28 +824,28 @@ div.b-db_entry-variant-list_item {
 .b-add_to_list.dropped .edit,
 .b-add_to_list.on_hold .edit,
 .b-add_to_list .expanded-options .remove-trigger .text {
-  color: var(--white);
+  color: $white;
 }
 
 .b-link_button.dark:hover,
 .b-link_button:hover,
 .p-user_rates-index .list-lines tr.editable:hover,
 .b-comments-notifier:hover {
-  background: var(--blue-hover);
+  background: $blue-hover;
   border: none;
 }
 
 .p-user_rates-index .list-lines tr.editable:hover,
 .b-form input[type="submit"],
 .b-button {
-  background: var(--blue);
+  background: $blue;
   transition: background-color 0.1s linear;
   transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
 }
 
 .b-form input[type="submit"]:hover,
 .b-button:hover {
-  background: var(--blue-hover);
+  background: $blue-hover;
 }
 
 .tooltip-inner .close,
@@ -859,21 +858,21 @@ div.b-db_entry-variant-list_item {
 .p-user_rates-index .list-lines tr.edit-form form,
 .b-shiki_editor.previewed .body .preview,
 .b-hot_topics-v2 {
-  color: var(--white);
-  background: var(--background);
+  color: $white;
+  background: $background;
   border: none;
 }
 
 .b-entry-info .line .b-tag {
-  color: var(--blue);
+  color: $blue;
   font-weight: 700;
   border: none;
 }
 
 .b-comments .comments-loader:hover,
 .b-comments .comments-expander:hover {
-  color: var(--white);
-  background: var(--blue);
+  color: $white;
+  background: $blue;
   border: none;
 }
 
@@ -883,8 +882,8 @@ div.b-db_entry-variant-list_item {
 .b-postloader.collapsed,
 .b-topic .footer-vote {
   border: none;
-  background: var(--background);
-  color: var(--white);
+  background: $background;
+  color: $white;
 }
 
 .p-dashboards-show .cc-news .c-news_topics .b-topic,
@@ -897,7 +896,7 @@ div.b-db_entry-variant-list_item {
 
 .cm-s-solarized.cm-s-light .CodeMirror-linenumber,
 .b-shiki_editor .body .editor textarea {
-  background: var(--background);
+  background: $background;
   border: 0;
 }
 
@@ -940,14 +939,14 @@ header.head .notice,
 .profile-actions .fav-remove,
 .profile-actions .ignore-add,
 .profile-actions .ignore-remove {
-  color: var(--dirty-white);
+  color: $dirty-white;
 }
 
 header.head h1 a.back:before,
 header.head h2 a.back:before,
 .b-comment .inner .name-date a.name .normal,
 .b-hot_topics-v2 .subject {
-  color: var(--blue-hover);
+  color: $blue-hover;
 }
 
 .b-edit_styles .edit_style .style_css .editor-expand.active:hover,
@@ -958,13 +957,13 @@ header.head h2 a.back:before,
 
 .p-user_rates-index .list-lines tr.edit-form .b-input.text textarea,
 .b-bb_codes-examples .example .textarea {
-  border: 1px solid var(--input);
-  color: var(--white);
-  background: var(--background);
+  border: 1px solid $input;
+  color: $white;
+  background: $background;
 }
 
 .p-user_rates-index .list-lines tr td .new-value input {
-  background: var(--input);
+  background: $input;
   border: none;
 }
 
@@ -979,47 +978,47 @@ body[data-locale="ru"] .b-offtopic_marker.off:before {
 .CodeMirror-sizer,
 .b-edit_styles .page_background_color .range-slider .noUi-handle,
 .l-top_menu-v2 .menu-dropdown > span {
-  background: var(--background);
+  background: $background;
 }
 
 .b-edit_styles .edit_style .style_css .CodeMirror,
 .b-edit_styles .new_style .style_css .CodeMirror {
-  background: var(--background);
+  background: $background;
   border: 0;
 }
 
 .cm-s-solarized.cm-s-light {
-  text-shadow: var(--background) 0 0;
+  text-shadow: $background 0 0;
 }
 
 .CodeMirror pre,
 .cm-s-solarized.cm-s-light .CodeMirror-linenumber,
 .b-shiki_editor .body .editor textarea {
-  color: var(--white);
+  color: $white;
   border: 0;
 }
 
 .b-collection_search .field input {
   border: none;
-  color: var(--background);
+  color: $background;
 }
 
 .noUi-connects {
-  background: var(--background);
-  color: var(--white);
+  background: $background;
+  color: $white;
 }
 
 .b-edit_styles .body_background #body_background_input {
-  border-color: var(--background);
+  border-color: $background;
 }
 
 .b-input select {
-  color: var(--background);
+  color: $background;
 }
 
 header.head h1,
 header.head h2 {
-  color: var(--white);
+  color: $white;
 }
 
 .b-feedback {
@@ -1083,7 +1082,7 @@ header.head h2 {
   }
 
   .l-page {
-    background: var(--background);
+    background: $background;
     opacity: 0.9;
     margin-top: 0;
     margin-bottom: 0;

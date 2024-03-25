@@ -1,0 +1,995 @@
+/* ----- Цветовая палитра ----- */
+/* Переопределение цветов всех ссылок */
+html:root {
+  --link-color: #0083ff;
+  --link-hover-color: #0069cc;
+  --link-active-color: #40a2ff;
+}
+
+/* ----- Общие стили ----- */
+/* Картинка на заднем фоне */
+body {
+  background: url(https://sun9-1.userapi.com/impg/7ntQZJ1sWeJ9TaMRlpjqDujAMRZTxmQs_RuZzg/HxLPYNH6RbQ.jpg?size=1963x2048&quality=96&sign=01053d5c603dbb081984bf8445ea75d4&type=album) center top 10%/cover fixed #1e2128 !important;
+}
+
+/* Переопределение цвета заголовков */
+h3 {
+  color: #0083ff;
+}
+
+/* Переопределение цвета жирного текста */
+b {
+  color: #ffffff;
+}
+
+/* Переопределение цвета текста во всех контейнерах */
+div {
+  color: #ffffff;
+}
+
+/* Цвет выделенных элементов */
+::selection {
+  color: #1e2128;
+  background: #0083ff;
+}
+
+.collapsed {
+  background: #1e2128;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Скругление аватарок */
+.avatar,
+div.avatar img,
+.p-user_rates-index .l-menu .avatar img,
+.b-user.avatar img,
+.b-user.named_avatar img,
+.b-user.avatar_fixed_margin img,
+.b-comment > .inner header img,
+.b-user.detailed .info .image-name .image,
+.b-dialog > .inner header img,
+.b-message > .inner header img,
+.l-top_menu-v2 .menu-dropdown.profile > span img {
+  border-radius: 50%;
+}
+
+/* ---- Header ---- */
+/* Прилипший header при прокрутке */
+.l-top_menu-v2 {
+  position: sticky;
+  top: 0;
+  background: #1e2128;
+  opacity: 0.9;
+  border: 0;
+}
+
+.l-top_menu-v2 .active .submenu {
+  max-height: calc(100vh - 46px);
+  overflow: auto;
+}
+
+.l-top_menu .menu-items .entry a,
+.l-top_menu .submenu > .entry,
+.b-main_search ul.popup {
+  background: #1e2128;
+  border: 0;
+}
+
+.l-top_menu .menu-items > .entry > .contest {
+  display: none;
+}
+
+/* --- Выпадающее меню --- */
+/* Фон выпадающего списка */
+.l-top_menu-v2 .submenu {
+  background: #1e2128;
+  border-bottom: 1px solid #1e2128;
+  border-left: 1px solid #1e2128;
+  border-right: 1px solid #1e2128;
+}
+
+/* --- Поиск --- */
+/* Фон выпадающего списка */
+.l-top_menu-v2 .global-search .search-results {
+  background-color: #1e2128;
+}
+
+/* Градиент переполнения выпадющего списка (сверху) */
+.l-top_menu-v2 .global-search .search-results::before {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #1a1a1a 100%);
+}
+
+/* Градиент переполнения выпадющего списка (снизу) */
+.l-top_menu-v2 .global-search .search-results::after {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1a1a1a 100%);
+}
+
+/* Цвет текста в элементах в выпадающем списке */
+.l-top_menu-v2 .global-search .search-results .search-mode,
+.l-top_menu-v2 .global-search .search-results .nothing_found:first-child,
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item:first-child,
+.l-top_menu-v2 .global-search .search-results .search-mode:first-child {
+  color: #ffffff;
+}
+
+/* Градиент у выбранного элемента в выпадающем списке */
+.l-top_menu-v2 .global-search .search-results .nothing_found.active,
+.l-top_menu-v2 .global-search .search-results .nothing_found:focus,
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item.active,
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item:focus,
+.l-top_menu-v2 .global-search .search-results .search-mode.active,
+.l-top_menu-v2 .global-search .search-results .search-mode:focus {
+  background: linear-gradient(270deg, rgba(43, 138, 204, 0.2) 0%, rgba(43, 138, 204, 0) 100%), rgba(43, 138, 204, 0.01);
+}
+
+/* Цвет бокового штриха у выбранного элемента в выпадающем списке */
+.l-top_menu-v2 .global-search .search-results .search-mode.active::before,
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item.active::before {
+  background: #0083ff;
+}
+
+/* Иконка поиска */
+.l-top_menu-v2 .global-search .search-marker {
+  color: #1e2128;
+}
+
+/* Иконка поиска (активен) */
+.l-top_menu-v2.is-search-focus .global-search .search-marker {
+  color: #40a2ff;
+}
+
+/* ---- Main ---- */
+/* Основной блок */
+.l-page {
+  background: #1e2128;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  opacity: 0.9;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+/* Выпадающий блок с подробной информацией */
+.tipsy-inner {
+  background: #1e2128;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Контейнер с информацией --- */
+/* Цвет ключа (характеристика) */
+.b-catalog_entry-tooltip .inner .line .key,
+.b-db_entry-variant-list_item > .info .line .key {
+  color: #ffffff;
+}
+
+/* --- Карточка человека/персонажа/тайтла --- */
+/* Центровка текста в миниатюре карточки человека/персонажа */
+.c-person > .cover > .title,
+.c-character > .cover > .title {
+  text-align: center;
+}
+
+/* --- История --- */
+/* -- Логи -- */
+/* Цвет надписи "добавлено" */
+.b-user_rate_log .action.create {
+  color: #e3e3e3;
+}
+
+/* Цвет надписи "изменено" */
+.b-user_rate_log .action.update {
+  color: #c778dd;
+}
+
+/* Цвет надписи "удалено" */
+.b-user_rate_log .action.destroy {
+  color: #e06b74;
+}
+
+/* Цвет надписи "подробности" */
+.b-user_rate_log .spoiler.collapsed > span {
+  color: #ffffff;
+}
+
+/* Цвет надписи "подробности" при наведении */
+.b-user_rate_log .spoiler.collapsed > span:hover {
+  color: #abb2bf;
+}
+
+/* Цвет надписи "спрятать" */
+.b-user_rate_log .spoiler.collapse > span {
+  color: #abb2bf;
+}
+
+/* Цвет надписи "спрятать" при наведении */
+.b-user_rate_log .spoiler.collapse span:hover {
+  color: #8a93a6;
+}
+
+/* --- Спойлер --- */
+/* Цвет кнопки спойлера */
+.b-spoiler_block > span {
+  background-color: #0083ff;
+}
+
+/* Цвет кнопки спойлера при наведении */
+.b-spoiler_block > span:hover {
+  background: #0069cc;
+}
+
+/* Цвета открытого блока спойлера */
+.b-spoiler_block > div {
+  color: #1e2128;
+  border-left: 4px solid #0083ff;
+  padding: 5px 10px;
+}
+
+/* Цвет текста в большом блоке спойлера */
+.b-spoiler_block > div > div {
+  color: #1e2128;
+}
+
+/* Цвет строчного спойлера */
+.b-spoiler_inline:not(.is-opened) {
+  background-color: #6c6c6c;
+}
+
+/* Цвет строчного спойлера при наведении */
+.b-spoiler_inline:not(.is-opened):hover {
+  background-color: #7c7c7c;
+}
+
+/* Цвет строчного спойлера при открытии */
+.b-spoiler_inline:not(.is-opened):active {
+  background-color: #8c8c8c;
+}
+
+/* Цвет строчного спойлера в блочном спойлере */
+.b-spoiler_block .b-spoiler .content .inner {
+  color: #1e2128;
+}
+
+/* --- Теги --- */
+/* Переопредление цвета тега "спойлер" */
+.b-anime_status_tag.spoilers {
+  background-color: #d53026;
+  border: 1px solid #d53026;
+}
+
+/* --- Комментарии --- */
+/* Цвет грандиента переполнения для изображений */
+.b-height_shortener .shade {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#1a1a1a));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #1a1a1a);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1a1a1a);
+}
+
+/* ----- Главная ----- */
+/* Измение цвета заголовков разделов */
+.headline,
+.p-dashboards-show .v2 .headline.magenta a,
+.midheadline,
+.subheadline {
+  color: #ffffff;
+  background: #1e2128;
+  border-left: 0;
+}
+
+/* --- Пользовательские секции ---*/
+/* -- Карточка последней активности из истории -- */
+/* Изменение цвета карточки */
+.p-dashboards-show .v2 .my-list {
+  background: #1e2128;
+  border-color: #ffffff;
+}
+
+/* Изменение цвета "Мой список" */
+.p-dashboards-show .v2 .my-list .label span {
+  color: #ffffff;
+}
+
+/* Изменение цвета названия заголовка тайтла при наведении */
+.b-user_rate-history:hover .title {
+  color: #0069cc;
+}
+
+/* Изменение цвета статуса тайтла */
+.b-user_rate-history .status-counter .status {
+  color: #0083ff;
+}
+
+/* ----- Профиль ----- */
+/* ---- Секция "Основная информация" ---- */
+/* Изменение цвета надписей над статус барами */
+.b-stats_bar a.title,
+.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility a,
+.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility span.link-replacement {
+  color: #ffffff;
+}
+
+/* Изменение цвета показателя просмотренных/прочитанных */
+.b-stats_bar.anime .bar .first,
+.b-stats_bar.manga .bar .first {
+  background: #98c379;
+  color: #1e2128;
+  font-weight: bold;
+}
+
+/* Изменение цвета показателя запланированных */
+.b-stats_bar.anime .bar .second,
+.b-stats_bar.manga .bar .second {
+  background: #e5c07a;
+  color: #1e2128;
+  font-weight: bold;
+}
+
+/* Изменение цвета показателя брошенных */
+.b-stats_bar.anime .bar .third,
+.b-stats_bar.manga .bar .third {
+  background: #e06b74;
+  color: #1e2128;
+  font-weight: bold;
+}
+
+.b-stats_bar .stat_names .stat_name[data-type=planned] a {
+  color: #e5c07a;
+}
+
+.b-stats_bar .stat_names .stat_name[data-type=watching] a {
+  color: #0083ff;
+}
+
+.b-stats_bar .stat_names .stat_name[data-type=completed] a {
+  color: #98c379;
+}
+
+.b-stats_bar .stat_names .stat_name[data-type=on_hold] a {
+  color: #abb2bf;
+}
+
+.b-stats_bar .stat_names .stat_name[data-type=dropped] a {
+  color: #e06b74;
+}
+
+/* Изменение цвета надписи "Активность" */
+.p-profiles .profile-head .c-info .c-additionals b {
+  color: #ffffff;
+}
+
+/* Измение цвета надписи "комментарий(и)" */
+.p-profiles .profile-head .c-info .c-additionals div a {
+  color: #abb2bf;
+}
+
+/* Измение цвета надписи "комментарий(и)" при наведении */
+.p-profiles .profile-head .c-info .c-additionals div a:hover {
+  color: #8a93a6;
+}
+
+/* ---- Секция "Время за аниме и мангой" ---- */
+/* Изменение цвета заголовка секции */
+.p-profiles-show .profile-content .activity .title {
+  color: #ffffff;
+}
+
+/* Измение цвета индикатора рубежа пройденного времени */
+.b-stats_bar.lifetime .bar .first {
+  background: #98c379;
+}
+
+/* Изменение цвета рубежа пройденного времени */
+.p-profiles-show .lifetime .times .time.checked {
+  color: #777777;
+}
+
+/* ---- Секция "Активность на сайте" ---- */
+.bar.simple .bar.s3 {
+  background: #0069cc;
+  transition: background-color 0.1s linear;
+  transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
+}
+
+.bar.simple .bar:hover.s3 {
+  background: #0083ff;
+}
+
+.bar.simple .bar.s2 {
+  background: #0069cc;
+  transition: background-color 0.1s linear;
+  transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
+}
+
+.bar.simple .bar:hover.s2 {
+  background: #0083ff;
+}
+
+.bar.simple .bar.s1 {
+  background: #0069cc;
+  transition: background-color 0.1s linear;
+  transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
+}
+
+.bar.simple .bar:hover.s1 {
+  background: #0083ff;
+}
+
+.bar.simple .bar.s0 {
+  background: #0069cc;
+  transition: background-color 0.1s linear;
+  transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
+}
+
+.bar.simple .bar:hover.s0 {
+  background: #0069cc;
+}
+
+/* ----- Отзывы ----- */
+/* --- Меню выбора отзывов --- */
+/* Цвет фона меню выбора отзывов */
+.b-reviews_navigation .navigation-node-all,
+.b-reviews_navigation .navigation-node-positive,
+.b-reviews_navigation .navigation-node-neutral,
+.b-reviews_navigation .navigation-node-negative {
+  background-color: #1e2128;
+}
+
+/* Цвет текста неактивного элемента в меню выбора отзывов */
+.b-reviews_navigation .navigation-node.is-empty:not(.is-active) .label,
+.b-reviews_navigation .navigation-node.is-empty:not(.is-active) .count {
+  color: #5f666a;
+}
+
+/* Цвет фона элемента в меню выбора отзывов при наведении */
+.b-reviews_navigation .navigation-node-positive:not(.is-active):not(.is-empty):hover,
+.b-reviews_navigation .navigation-node-neutral:not(.is-active):not(.is-empty):hover,
+.b-reviews_navigation .navigation-node-negative:not(.is-active):not(.is-empty):hover {
+  background-color: #32363d;
+}
+
+/* Цвет бокового штриха (ВСЕ ОТЗЫВЫ) */
+.b-reviews_navigation .navigation-node-all {
+  border-color: #0083ff;
+}
+
+/* Цвет бокового штриха (ПОЛОЖИТЕЛЬНЫЕ) */
+.b-reviews_navigation .navigation-node-positive {
+  border-color: #65a528;
+}
+
+/* Цвет бокового штриха (НЕЙТРАЛЬНЫЕ) */
+.b-reviews_navigation .navigation-node-neutral {
+  border-color: #40a2ff;
+}
+
+/* Цвет бокового штриха (ОТРИЦАТЕЛЬНЫЕ) */
+.b-reviews_navigation .navigation-node-negative {
+  border-color: #e06b74;
+}
+
+/* --- Оценка на отзыв --- */
+/* Цвет фона оценки на отзыв */
+.b-footer_vote {
+  background-color: #1e2128;
+}
+
+/* --- Управление отзывами --- */
+/* Цвет фона кнопки "Ко всем отзывам" */
+.b-link_button.blue {
+  background-color: #0083ff;
+  border-color: #0083ff;
+}
+
+/* Цвет фона кнопки "Ко всем отзывам" при наведении */
+.b-link_button.blue:hover {
+  background-color: #0069cc;
+  border-color: #0069cc;
+}
+
+/* Когда-то там были комментарии, но теперь там живут драконы */
+.b-quote-v2 {
+  border-left: 4px solid #0083ff;
+  padding: 5px 10px;
+}
+
+.b-quote-v2 > .quote-content {
+  color: #1e2128;
+}
+
+.b-news_wall-topic .title {
+  color: #0083ff;
+}
+
+.b-news_wall-topic .status-line .comments,
+.b-news_wall-topic .status-line .is-pinned,
+.b-status-line .section.created_at time:before,
+.b-status-line .section.main .comments:before {
+  color: #abb2bf;
+}
+
+.b-anime_status_tag.other {
+  background-color: #707477;
+  border: 1px solid #707477;
+  opacity: 90%;
+}
+
+.b-rate .stars-container,
+.l-top_menu-v2 .global-search input,
+.b-collection_search .field,
+.CodeMirror-vscrollbar,
+.b-main_search .input,
+.l-page .menu-toggler .toggler,
+.b-input select,
+.b-input input[type=number],
+.b-input textarea[type=number],
+.b-input input[type=text],
+.b-input input[type=file] {
+  filter: invert(92%);
+}
+
+.b-input input[disabled] {
+  color: #ffffff;
+  background: #333333;
+  border-color: #333333;
+}
+
+.ac_results.menu-suggest .ac_even,
+.ac_results.menu-suggest .ac_odd,
+.b-table tr,
+.b-table td,
+.p-user_rates-index .list-groups .summary.posters.list,
+.p-user_rates-index .list-groups .summary.posters.library {
+  background: #1e2128;
+  border: none;
+  color: #ffffff;
+}
+
+.ac_results.menu-suggest .ac_even:hover,
+.ac_results.menu-suggest .ac_odd:hover {
+  background: #0083ff;
+}
+
+.b-video_variant .video-quality.bd {
+  filter: grayscale(100%);
+}
+
+a,
+.headline > a,
+.midheadline > a,
+.subheadline > a,
+.b-shiki_editor footer .about-bb_codes,
+.l-footer .links a,
+.b-options-floated a,
+.b-options-floated .link,
+.b-form .cancel,
+.b-link,
+header.head h1 a.back,
+header.head h2 a.back,
+.p-profiles .profile-head .c-mobile-actions a,
+.p-profiles .profile-head .c-mobile-actions span,
+.b-catalog_entry .cover .title,
+.p-dashboards-show .c-content .options .option,
+.b-forums .forum .link-with-input .link,
+.b-topic > .inner header .name-date a.name,
+.p-dashboards .user_list .list-type > .title .switch,
+.p-dashboards .user_list .history > .title .switch,
+.p-dashboards .user_list .list-type > .title .link,
+.p-dashboards .user_list .history > .title .link,
+.b-entry-info .line a,
+.b-catalog_entry-tooltip .inner .line .value .tag,
+.b-db_entry > .c-about .additional-links .line-container > .link,
+.b-db_entry > .c-about .additional-links .line-container > a,
+.b-height_shortener .expand,
+.b-catalog_entry-tooltip .inner a.name,
+.b-db_entry-note .name-container .name,
+.b-spoiler label,
+.b-mention,
+.b-mention s,
+.b-comment > .inner header .name-date a.name,
+.b-user.named_avatar .name,
+.b-animes-menu .menu-topics-block .entry .name,
+.b-lang_trigger span,
+.b-user16,
+.p-user_rates-index .stat-categories .category,
+.b-options-floated .action,
+.b-options-floated.mobile-desktop a,
+header.head a.misc,
+header.head a.edit,
+.p-topics header h1 a.reload,
+.p-animes_collection-index .pagination .link,
+.p-mangas_collection-index .pagination .link,
+.p-recommendations-index .pagination .link,
+.p-userlist_comparer-show .pagination .link,
+.b-video_variant.active a,
+.p-anime_videos-index .c-videos .video-variant-switcher,
+.b-video_variant a,
+.b-video_variant .video-author,
+.subheadline .misc-links > a,
+.b-dialog > .inner header .name-date a.name,
+.b-message > .inner header .name-date a.name,
+.b-user.detailed .history .line a .event,
+.p-profiles-edit .account .change-password a,
+.p-profiles-edit .misc .profile-action a:not(.b-button),
+.p-profiles-edit .misc .profile-action .link,
+.p-profiles-edit .misc .nickname-changes a:not(.b-button),
+.p-profiles-edit .misc .nickname-changes .link,
+.p-profiles-edit .list .profile-action a:not(.b-button),
+.p-profiles-edit .list .profile-action .link,
+.p-profiles-edit .list .nickname-changes a:not(.b-button),
+.p-profiles-edit .list .nickname-changes .link,
+.b-js-link,
+.p-contests-index .contest a,
+.p-contests .results a,
+.p-contests .match-day .match-link a,
+.p-contests .rating .member a,
+.b-contest_match .vs .actions .action span,
+.b-club .name,
+.c-actions .new_comment:after,
+.c-actions .new_review:after,
+.c-actions .fav-add:after,
+.c-actions .edit:after,
+.b-options-floated.mobile-phone a,
+.b-tag,
+.b-topic .footer-vote .vote-group .vote,
+.c-actions .fav-remove:after,
+.p-user_history-index .history-page .history-interval p a,
+.b-options-floated.mobile-phone_portrait a,
+.p-userlist_comparer .comparer table .name a,
+.b-shiki_editor footer .unpreview:not(.link),
+.b-shiki_editor footer .cancel,
+.b-shiki_editor footer .hide,
+.p-profiles-show .about a,
+.b-comments .comments-collapser,
+.club-actions .upload:after,
+.club-actions .invite:after,
+.club-actions .leave:after,
+.b-bb_codes-examples .result a,
+.b-edit_styles .edit_style .style_css .editor-expand.active,
+.b-edit_styles .edit_style .style_css .editor-collapse.active,
+.p-profiles .profile-head .c-brief header .notice a,
+.b-comment.aside-expanded > .inner aside.buttons .main-controls .item-reply,
+.b-comment.aside-expanded > .inner aside.buttons .main-controls .item-delete,
+.b-comment.aside-expanded > .inner aside.buttons .main-controls .item-cancel,
+.b-comment.aside-expanded > .inner aside.buttons .main-controls .item-edit,
+.b-comment.aside-expanded > .inner aside.buttons .main-controls .item-moderation,
+.b-topic.aside-expanded > .inner aside.buttons .main-controls .item-ignore,
+.b-topic.aside-expanded > .inner aside.buttons .main-controls .item-reply,
+.b-topic.aside-expanded > .inner aside.buttons .main-controls .item-cancel {
+  color: #0083ff;
+  font-weight: 700;
+  border: none;
+}
+
+.l-top_menu .menu-items .entry a,
+.l-top_menu .submenu > .entry,
+.b-main_search ul.popup,
+.b-main_search .popup li.active,
+.b-main_search .popup li:hover,
+.b-main_search .input input,
+.b-main_search ul.popup li,
+.ac_results,
+div.b-db_entry-variant-list_item {
+  border: none;
+}
+
+.p-user_rates-index .list-lines tr td .new-value .item-add {
+  position: relative;
+}
+
+.p-user_rates-index .list-lines tr .name a {
+  color: #0083ff;
+  font-weight: 700;
+}
+
+.p-user_rates-index .list-lines tr .name a:hover {
+  color: #ffffff;
+}
+
+.p-dashboards-show .cc-news .c-generated_news .b-topic,
+.b-topic,
+.b-db_entry-note,
+.p-topics .l-menu .sticky-topics .topic,
+.p-topics .l-menu .clubs .entry,
+.p-topics .l-menu .critiques .entry,
+.l-top_menu .entry,
+.p-profiles .profile-head .c-history .entry {
+  border: none;
+}
+
+.p-user_rates-index .list-groups .summary.lines.library {
+  border-color: #333333;
+}
+
+.b-list li {
+  color: #0083ff;
+  list-style-image: none;
+  list-style: disc;
+}
+
+.b-quote {
+  background: #1e2128 !important;
+  color: #ffffff !important;
+  border: 1px dashed;
+}
+
+.b-to-top .slide:before {
+  background: #e3e3e3;
+}
+
+.b-link_button.dark,
+.b-link_button,
+.b-add_to_list.watching .trigger,
+.b-add_to_list.watching .option,
+.b-db_entry-note .name-container .b-user_rate .b-add_to_list .trigger,
+.b-db_entry-note .name-container .b-user_rate .b-add_to_list .option,
+.b-add_to_list.planned .trigger,
+.b-add_to_list.planned .option,
+.b-comments-notifier,
+.b-add_to_list.completed .trigger,
+.b-add_to_list.completed .option,
+.b-add_to_list.rewatching .trigger,
+.b-add_to_list.rewatching .option,
+.b-add_to_list.on_hold .trigger,
+.b-add_to_list.on_hold .option,
+.b-add_to_list.dropped .trigger,
+.b-add_to_list.dropped .option {
+  color: #ffffff;
+  background: #0083ff;
+  border: none;
+}
+
+.b-add_to_list .plus,
+.b-add_to_list.completed .edit,
+.b-add_to_list.dropped .edit,
+.b-add_to_list.on_hold .edit,
+.b-add_to_list .expanded-options .remove-trigger .text {
+  color: #ffffff;
+}
+
+.b-link_button.dark:hover,
+.b-link_button:hover,
+.p-user_rates-index .list-lines tr.editable:hover,
+.b-comments-notifier:hover {
+  background: #0069cc;
+  border: none;
+}
+
+.p-user_rates-index .list-lines tr.editable:hover,
+.b-form input[type=submit],
+.b-button {
+  background: #0083ff;
+  transition: background-color 0.1s linear;
+  transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
+}
+
+.b-form input[type=submit]:hover,
+.b-button:hover {
+  background: #0069cc;
+}
+
+.tooltip-inner .close,
+.b-comments .comments-loader,
+.b-comments .comments-hider,
+.b-comments .comments-expander,
+.p-animes-show .other-names.click-loader,
+.p-mangas-show .other-names.click-loader,
+.p-ranobe-show .other-names.click-loader,
+.p-user_rates-index .list-lines tr.edit-form form,
+.b-shiki_editor.previewed .body .preview,
+.b-hot_topics-v2 {
+  color: #ffffff;
+  background: #1e2128;
+  border: none;
+}
+
+.b-entry-info .line .b-tag {
+  color: #0083ff;
+  font-weight: 700;
+  border: none;
+}
+
+.b-comments .comments-loader:hover,
+.b-comments .comments-expander:hover {
+  color: #ffffff;
+  background: #0083ff;
+  border: none;
+}
+
+.b-hot_topics,
+.p-dashboards-show .cc-second .cc-inner .c-my_list,
+.tooltip-inner,
+.b-postloader.collapsed,
+.b-topic .footer-vote {
+  border: none;
+  background: #1e2128;
+  color: #ffffff;
+}
+
+.p-dashboards-show .cc-news .c-news_topics .b-topic,
+.b-comment,
+.l-top_menu .submenu,
+.p-dashboard .l-content .b-catalog_entry,
+.p-dashboard .l-menu .ongoing {
+  border: none;
+}
+
+.cm-s-solarized.cm-s-light .CodeMirror-linenumber,
+.b-shiki_editor .body .editor textarea {
+  background: #1e2128;
+  border: 0;
+}
+
+.p-profiles .profile-head .c-brief header .notice,
+.bar.vertical .line .x_label,
+.b-hot_topics .topic.subject,
+.b-catalog_entry .cover .misc span,
+.b-entry-info .line .value,
+.b-rate .score-notice,
+.p-user_rates-index .list-groups .summary .stat-value,
+.p-user_rates-index .list-groups .summary.lines,
+.p-user_rates-index .l-content .order-control,
+header.head .notice,
+.b-video_player .cc-player_controls .episode-num .video-link a,
+.p-anime_videos-index .same-videos .title,
+.p-anime_videos-index .c-anime_video_episodes .title,
+.p-anime_videos-index .c-videos .title,
+.b-video_variant .episode-num,
+.b-video_variant .video-id,
+.b-video_variant .episode-hostings,
+.b-video_variant .video-hosting,
+.b-video_variant .video-language,
+.b-user.detailed .history .line .event,
+.p-contests .match-day .match-link .c-column.loser a,
+.p-contests .match-day .match-link .c-column.created a,
+.b-animes-menu .total-rates,
+.c-actions .new_comment,
+.c-actions .new_review,
+.c-actions .new_critique,
+.c-actions .fav-add,
+.c-actions .edit,
+.c-actions .fav-remove,
+.p-user_rates-index .list-lines tr td .rewatches,
+.p-profiles .profile-head .c-brief header h1.aliases::after,
+.profile-actions .mail,
+.profile-actions .settings,
+.profile-actions .ban,
+.profile-actions .talk,
+.profile-actions .fav-add,
+.profile-actions .fav-remove,
+.profile-actions .ignore-add,
+.profile-actions .ignore-remove {
+  color: #abb2bf;
+}
+
+header.head h1 a.back:before,
+header.head h2 a.back:before,
+.b-comment .inner .name-date a.name .normal,
+.b-hot_topics-v2 .subject {
+  color: #0069cc;
+}
+
+.b-edit_styles .edit_style .style_css .editor-expand.active:hover,
+.b-edit_styles .edit_style .style_css .editor-collapse.active:hover,
+.p-user_rates-index .list-lines .selectable:hover {
+  filter: brightness(0.6);
+}
+
+.p-user_rates-index .list-lines tr.edit-form .b-input.text textarea,
+.b-bb_codes-examples .example .textarea {
+  border: 1px solid #333333;
+  color: #ffffff;
+  background: #1e2128;
+}
+
+.p-user_rates-index .list-lines tr td .new-value input {
+  background: #333333;
+  border: none;
+}
+
+body[data-locale=ru] .b-offtopic_marker.off:before {
+  border: 0;
+}
+
+.CodeMirror-gutter,
+.CodeMirror-gutters,
+.CodeMirror-linenumber,
+.CodeMirror-scroll,
+.CodeMirror-sizer,
+.b-edit_styles .page_background_color .range-slider .noUi-handle,
+.l-top_menu-v2 .menu-dropdown > span {
+  background: #1e2128;
+}
+
+.b-edit_styles .edit_style .style_css .CodeMirror,
+.b-edit_styles .new_style .style_css .CodeMirror {
+  background: #1e2128;
+  border: 0;
+}
+
+.cm-s-solarized.cm-s-light {
+  text-shadow: #1e2128 0 0;
+}
+
+.CodeMirror pre,
+.cm-s-solarized.cm-s-light .CodeMirror-linenumber,
+.b-shiki_editor .body .editor textarea {
+  color: #ffffff;
+  border: 0;
+}
+
+.b-collection_search .field input {
+  border: none;
+  color: #1e2128;
+}
+
+.noUi-connects {
+  background: #1e2128;
+  color: #ffffff;
+}
+
+.b-edit_styles .body_background #body_background_input {
+  border-color: #1e2128;
+}
+
+.b-input select {
+  color: #1e2128;
+}
+
+header.head h1,
+header.head h2 {
+  color: #ffffff;
+}
+
+.b-feedback {
+  visibility: hidden;
+}
+
+.ac_results .character-suggest .avatar {
+  border-radius: 0;
+}
+
+/* ----- Адаптивная верстка под экраны с меньшим разрешением ----- */
+@media only screen and (min-width: 768px) {
+  .p-profiles-show .profile-content .cc-2 > .c-column {
+    width: 100%;
+  }
+  .p-profiles-show .profile-content .cc-2 > .c-left {
+    position: relative;
+    width: 77%;
+    padding-right: 30px;
+    margin-right: 0;
+    z-index: 1;
+  }
+  .p-profiles-show .lifetime {
+    margin-bottom: 15px;
+  }
+  .p-profiles-show .profile-content .cc-2 > .c-right {
+    float: none;
+  }
+  .p-profiles-show .profile-content .cc-2 > .c-right .cc-2a {
+    width: 23%;
+    overflow: hidden;
+  }
+  .p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column {
+    width: 100%;
+    margin: 0;
+  }
+  .p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column:last-child {
+    margin-top: 15px;
+  }
+  .p-profiles-show .profile-content .cc-2 > .c-right > .block:last-child {
+    clear: both;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .p-profiles-show .b-feedback:after {
+    display: none;
+  }
+  .l-page {
+    background: #1e2128;
+    opacity: 0.9;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+}
