@@ -13,14 +13,14 @@ html:root {
   --positive: #65a528;
   --neutral: #40a2ff;
   --negative: #e06b74;
-  /* Дополнительные цвета */
   --input: #333333;
+  /* Дополнительные цвета */
   --black: #32363d;
-  --small-button: #555555;
   --dirty-white: #abb2bf;
   --magenta: #c778dd;
   --green: #98c379;
   --yellow: #d9d241;
+  --orange: #E5C07A;
 }
 
 /* ----- Общие стили ----- */
@@ -324,11 +324,6 @@ div.avatar img,
   color: var(--white);
 }
 
-/* Изменение цвета названия заголовка тайтла */
-.b-user_rate-history .title {
-  color: var(--blue);
-}
-
 /* Изменение цвета названия заголовка тайтла при наведении */
 .b-user_rate-history:hover .title {
   color: var(--blue-hover);
@@ -340,6 +335,138 @@ div.avatar img,
 }
 
 /* ----- Профиль ----- */
+
+/* ---- Секция "Основная информация" ---- */
+
+/* Изменение цвета надписей над статус барами */
+.b-stats_bar a.title,
+.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility a,
+.p-profiles
+  .profile-head
+  .c-info
+  .c-lists-info
+  .b-stats_bar
+  .compatibility
+  span.link-replacement {
+  color: var(--white);
+}
+
+/* Изменение цвета показателя просмотренных/прочитанных */
+.b-stats_bar.anime .bar .first,
+.b-stats_bar.manga .bar .first {
+  background: var(--positive);
+  color: var(--background);
+  font-weight: bold;
+}
+
+/* Изменение цвета показателя запланированных */
+.b-stats_bar.anime .bar .second,
+.b-stats_bar.manga .bar .second {
+  background: var(--orange);
+  color: var(--background);
+  font-weight: bold;
+}
+
+/* Изменение цвета показателя брошенных */
+.b-stats_bar.anime .bar .third,
+.b-stats_bar.manga .bar .third {
+  background: var(--negative);
+  color: var(--background);
+  font-weight: bold;
+}
+
+
+.b-stats_bar .stat_names .stat_name[data-type="planned"] a {
+  color: var(--orange);
+}
+
+
+.b-stats_bar .stat_names .stat_name[data-type="watching"] a {
+  color: var(--blue);
+}
+
+
+.b-stats_bar .stat_names .stat_name[data-type="completed"] a {
+  color: var(--green);
+}
+
+
+.b-stats_bar .stat_names .stat_name[data-type="on_hold"] a {
+  color: var(--yellow);
+}
+
+
+.b-stats_bar .stat_names .stat_name[data-type="dropped"] a {
+  color: var(--negative);
+}
+
+/* Изменение цвета надписи "Активность" */
+.p-profiles .profile-head .c-info .c-additionals b {
+  color: var(--white);
+}
+
+.p-profiles .profile-head .c-info .c-additionals div a {
+  color: var(--dirty-white);
+}
+
+/* ---- Секция "Время за аниме и мангой" ---- */
+
+/* Изменение цвета заголовка секции */
+.p-profiles-show .profile-content .activity .title {
+  color: var(--white);
+}
+
+/* Измение цвета индикатора рубежа пройденного времени */
+.b-stats_bar.lifetime .bar .first {
+  background: var(--green);
+}
+
+/* Изменение цвета рубежа пройденного времени */
+.p-profiles-show .lifetime .times .time.checked {
+  color: #777777;
+}
+
+/* ---- Секция "Активность на сайте" ---- */
+
+.bar.simple .bar.s3 {
+  background: var(--blue-hover);
+  transition: background-color 0.1s linear;
+  transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
+}
+
+.bar.simple .bar:hover.s3 {
+  background: var(--blue);
+}
+
+.bar.simple .bar.s2 {
+  background: var(--blue-hover);
+  transition: background-color 0.1s linear;
+  transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
+}
+
+.bar.simple .bar:hover.s2 {
+  background: var(--blue);
+}
+
+.bar.simple .bar.s1 {
+  background: var(--blue-hover);
+  transition: background-color 0.1s linear;
+  transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
+}
+
+.bar.simple .bar:hover.s1 {
+  background: var(--blue);
+}
+
+.bar.simple .bar.s0 {
+  background: var(--blue-hover);
+  transition: background-color 0.1s linear;
+  transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
+}
+
+.bar.simple .bar:hover.s0 {
+  background: var(--blue-hover);
+}
 
 /* ----- Отзывы ----- */
 
@@ -429,7 +556,7 @@ div.avatar img,
 .b-news_wall-topic .status-line .is-pinned,
 .b-status-line .section.created_at time:before,
 .b-status-line .section.main .comments:before {
-  color: #9da2a8;
+  color: var(--dirty-white);
 }
 
 .b-anime_status_tag.other {
@@ -479,15 +606,6 @@ div.avatar img,
 }
 
 a,
-.b-stats_bar a.title,
-.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility a,
-.p-profiles
-  .profile-head
-  .c-info
-  .c-lists-info
-  .b-stats_bar
-  .compatibility
-  span.link-replacement,
 .headline > a,
 .midheadline > a,
 .subheadline > a,
@@ -499,7 +617,6 @@ a,
 .b-link,
 header.head h1 a.back,
 header.head h2 a.back,
-.b-stats_bar .stat_names .stat_name a,
 .p-profiles .profile-head .c-mobile-actions a,
 .p-profiles .profile-head .c-mobile-actions span,
 .b-catalog_entry .cover .title,
@@ -566,7 +683,6 @@ header.head a.edit,
 .b-options-floated.mobile-phone a,
 .b-tag,
 .b-topic .footer-vote .vote-group .vote,
-.p-profiles .profile-head .c-info .c-additionals div a,
 .c-actions .fav-remove:after,
 .p-user_history-index .history-page .history-interval p a,
 .b-options-floated.mobile-phone_portrait a,
@@ -760,7 +876,6 @@ div.b-db_entry-variant-list_item {
 }
 
 .p-profiles .profile-head .c-brief header .notice,
-.p-profiles-show .profile-content .activity .title,
 .bar.vertical .line .x_label,
 .b-hot_topics .topic.subject,
 .b-catalog_entry .cover .misc span,
@@ -785,14 +900,23 @@ header.head .notice,
 .b-animes-menu .total-rates,
 .c-actions .new_comment,
 .c-actions .new_review,
+.c-actions .new_critique,
 .c-actions .fav-add,
 .c-actions .edit,
 .c-actions .fav-remove,
-.p-user_rates-index .list-lines tr td .rewatches {
-  color: #9da2a8;
+.p-user_rates-index .list-lines tr td .rewatches,
+.p-profiles .profile-head .c-brief header h1.aliases::after,
+.profile-actions .mail,
+.profile-actions .settings,
+.profile-actions .ban,
+.profile-actions .talk,
+.profile-actions .fav-add,
+.profile-actions .fav-remove,
+.profile-actions .ignore-add,
+.profile-actions .ignore-remove {
+  color: var(--dirty-white);
 }
 
-.p-profiles .profile-head .c-info .c-additionals b,
 header.head h1 a.back:before,
 header.head h2 a.back:before,
 .b-comment .inner .name-date a.name .normal,
@@ -865,61 +989,6 @@ body[data-locale="ru"] .b-offtopic_marker.off:before {
 
 .b-input select {
   color: var(--background);
-}
-
-.bar.simple .bar.s3 {
-  background: var(--blue-hover);
-  transition: background-color 0.1s linear;
-  transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
-}
-
-.bar.simple .bar:hover.s3 {
-  background: var(--blue);
-}
-
-.bar.simple .bar.s2 {
-  background: var(--blue-hover);
-  transition: background-color 0.1s linear;
-  transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
-}
-
-.bar.simple .bar:hover.s2 {
-  background: var(--blue);
-}
-
-.bar.simple .bar.s1 {
-  background: var(--blue-hover);
-  transition: background-color 0.1s linear;
-  transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
-}
-
-.bar.simple .bar:hover.s1 {
-  background: var(--blue);
-}
-
-.bar.simple .bar.s0 {
-  background: var(--blue-hover);
-  transition: background-color 0.1s linear;
-  transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
-}
-
-.bar.simple .bar:hover.s0 {
-  background: var(--blue-hover);
-}
-
-.b-stats_bar.lifetime .bar .first {
-  background: var(--blue);
-}
-
-.b-stats_bar.anime .bar .first,
-.b-stats_bar .bar .third,
-.b-stats_bar.manga .bar .first {
-  background: var(--blue-hover);
-}
-
-.b-stats_bar.anime .bar .second,
-.b-stats_bar.manga .bar .second {
-  background: var(--blue);
 }
 
 header.head h1,
