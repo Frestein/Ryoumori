@@ -1,31 +1,31 @@
 {
   "name": "ryoumori",
   "version": "1.0.0",
-  "description": "Customizable theme for Shikimori preserving original design.",
-  "scripts": {
-    "build": "sass --no-source-map --no-charset scss/ryoumori.scss css/ryoumori.css && npx postcss css/ryoumori.css -o css/ryoumori.min.css"
-  },
+  "author": "Frestein",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Frestein/Ryoumori.git"
   },
+  "bugs": {
+    "url": "https://github.com/Frestein/Ryoumori/issues"
+  },
+  "copyright": "Copyright (c) 2024 Frestein",
+  "description": "Customizable theme for Shikimori preserving original design.",
+  "homepage": "https://github.com/Frestein/Ryoumori#readme",
   "keywords": [
     "shikimori",
     "theme",
     "css",
     "sass"
   ],
-  "author": "Frestein",
   "license": "ISC",
-  "copyright": "Copyright (c) 2024 Frestein",
-  "bugs": {
-    "url": "https://github.com/Frestein/Ryoumori/issues"
+  "scripts": {
+    "build": "sass --no-source-map --no-charset scss/ryoumori.scss css/ryoumori.css && npx postcss css/ryoumori.css -o css/ryoumori.min.css"
   },
-  "homepage": "https://github.com/Frestein/Ryoumori#readme",
-  "devDependencies": {
-    "cssnano": "^6.1.1",
+  "dependencies": {
+    "cssnano": "^7.0.1",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
-    "sass": "^1.72.0"
+    "sass": "^1.76.0"
   }
 }
